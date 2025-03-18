@@ -1,0 +1,26 @@
+---
+name:  onehotencoding
+title: One Hot Encoding
+menuGroup: Data
+menuSubgroup: One Hot Encoding
+version: '1.0.0'
+jas: '1.2'
+
+options:
+    - name: data
+      type: Data
+      
+    - name: ColumnToSplit
+      title: Variable to Split
+      type: Variable
+
+    - name: separator
+      title: Separator
+      type: String
+
+    - name: newColumns
+      title: Display New Variables
+      type: Output
+      visible: true
+      default: true
+...

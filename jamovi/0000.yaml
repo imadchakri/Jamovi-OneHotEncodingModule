@@ -1,0 +1,22 @@
+---
+title: Converts categorical variables into binary columns.
+name: OneHotEncoding
+version: 1.0.0
+jms: '1.0'
+authors:
+  - IMAD CHAKRI
+maintainer: Imad CHAKRI <i.chakri@uiz.ac.ma>
+date: '2025-03-18'
+type: R
+description: Converts categorical variables into binary (0/1) columns.
+analyses:
+  - title: One Hot Encoding
+    name: onehotencoding
+    ns: OneHotEncoding
+    menuGroup: Data
+    menuTitle: One Hot Encoding
+    menuSubgroup: One Hot Encoding
+usesNative: true
+minApp: 1.0.8
+
+...

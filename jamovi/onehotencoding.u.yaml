@@ -1,0 +1,28 @@
+title: One Hot Encoding
+name: onehotencoding
+jus: '3.0'
+stage: 0
+compilerMode: aggressive
+children:
+  - type: VariableSupplier
+    persistentItems: false
+    stretchFactor: 1
+    children:
+      - type: TargetLayoutBox
+        label: Variable to Split
+        children:
+          - type: VariablesListBox
+            name: ColumnToSplit
+            maxItemCount: 1
+            isTarget: true
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: TextBox
+        name: separator
+        format: string
+  - type: LayoutBox
+    margin: large
+    children:
+      - type: Output
+        name: newColumns
