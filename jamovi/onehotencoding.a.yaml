@@ -17,6 +17,9 @@ options:
     - name: separator
       title: Separator
       type: String
+      default: ','
+      description: 'The character used to separate values'
+
 
     - name: newColumns
       title: Display New Variables

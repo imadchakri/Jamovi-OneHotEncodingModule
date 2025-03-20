@@ -7,7 +7,7 @@ onehotencodingOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Cl
     public = list(
         initialize = function(
             ColumnToSplit = NULL,
-            separator = NULL, ...) {
+            separator = ",", ...) {
 
             super$initialize(
                 package="OneHotEncoding",
@@ -20,7 +20,8 @@ onehotencodingOptions <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Cl
                 ColumnToSplit)
             private$..separator <- jmvcore::OptionString$new(
                 "separator",
-                separator)
+                separator,
+                default=",")
             private$..newColumns <- jmvcore::OptionOutput$new(
                 "newColumns")
 
@@ -87,7 +88,7 @@ onehotencodingBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class
 #' 
 #' @param data .
 #' @param ColumnToSplit .
-#' @param separator .
+#' @param separator The character used to separate values
 #' @return A results object containing:
 #' \tabular{llllll}{
 #'   \code{results$text} \tab \tab \tab \tab \tab a preformatted \cr
@@ -98,7 +99,7 @@ onehotencodingBase <- if (requireNamespace("jmvcore", quietly=TRUE)) R6::R6Class
 onehotencoding <- function(
     data,
     ColumnToSplit,
-    separator) {
+    separator = ",") {
 
     if ( ! requireNamespace("jmvcore", quietly=TRUE))
         stop("onehotencoding requires jmvcore to be installed (restart may be required)")
